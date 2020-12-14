@@ -1,0 +1,40 @@
+@media(max-width:600px){
+    .sidebar {
+        min-width: 50%;
+        height: 100vh;
+        background-color: rgb(49, 48, 48);
+        color: #fff;
+    }
+    .header{
+        .displayActive{
+            display:block ;
+        }
+        .displayInactive{
+            display:none ;
+        }
+
+    }
+    #msg_block{
+        width:98vw;
+        padding-left:10%;
+        top:171%;
+        right:-415%;
+
+    }
+    #notif_block{
+        width:98vw;
+        padding-left:10%;
+        top:171%;
+        right:-237%;
+
+    }
+    #profile{
+        width:98vw;
+        padding-left:10%;
+        top:171%;
+        right:-237%;
+    }
+
+
+
+}

@@ -1,0 +1,1 @@
+export const SIDEMENU_TOGGLE = 'sidemenu_toggle';

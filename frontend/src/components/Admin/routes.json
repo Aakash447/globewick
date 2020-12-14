@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "name": "Link1",
+      "showName": "Link 1",
+      "path": "/link1",
+      "visible": true,
+      "iconName": "",
+      "childRoutes": [
+        {
+          "name": "SubLink1",
+          "showName": "SubLink 1",
+          "path": "/sublink1",
+          "visible": true,
+          "iconName": ""
+        },
+        {
+          "name": "SubLink2",
+          "showName": "SubLink 2",
+          "path": "/sublink2",
+          "visible": true,
+          "iconName": ""
+        },
+        {
+          "name": "SubLink3",
+          "showName": "SubLink 3",
+          "path": "/sublink3",
+          "visible": true,
+          "iconName": ""
+        }
+      ]
+    },
+
+    {
+      "name": "Link2",
+      "showName": "Link 2",
+      "path": "/link2",
+      "visible": true,
+      "iconName": "",
+      "childRoutes": null
+    },
+
+    {
+      "name": "User",
+      "showName": "User",
+      "path": "/user",
+      "visible": true,
+      "iconName": "",
+      "childRoutes": [
+        {
+          "name": "register",
+          "showName": "Register",
+          "path": "/register",
+          "visible": true,
+          "iconName": ""
+        },
+        {
+          "name": "SubLink22",
+          "showName": "SubLink 22",
+          "path": "/sublink22",
+          "visible": true,
+          "iconName": ""
+        },
+        {
+          "name": "SubLink33",
+          "showName": "SubLink 33",
+          "path": "/sublink33",
+          "visible": true,
+          "iconName": ""
+        }
+      ]
+    }
+
+    
+  ]
+}

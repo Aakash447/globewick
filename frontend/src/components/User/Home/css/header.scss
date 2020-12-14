@@ -1,0 +1,38 @@
+#header_wrapper {
+  // position:sticky;
+  // top:0;
+  // z-index: 10;
+  // width:560px;
+  z-index:1;
+  min-height: 110px;
+  padding-top: 20px;
+  background-color: black;
+  .row {
+    padding: 0 0;
+    #logo {
+      img {
+        width: 13%;
+        height: 100%;
+      }
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      margin: 26px 0;
+      li {
+        margin: 0 25px;
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+          &:hover {
+            position: relative;
+            top: 1px;
+          }
+        }
+      }
+    }
+  }
+}
