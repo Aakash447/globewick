@@ -1,6 +1,7 @@
 import axios from 'axios';
-const serverEndpoint = 'https://globewick.herokuapp.com:3008';
+const serverEndpoint = '';
 // https://globewick.herokuapp.com/
+// http://localhost:3008
 
 const registerUser = (data) => {
     console.log('about to send axios req')
