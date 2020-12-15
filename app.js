@@ -60,7 +60,13 @@ if(process.env.NODE_ENV=="production"){
     res.sendFile(path.resolve(__dirname, "./frontend", "build", "index.html"));
   });
 }
-
+app.get("/testapi",(req,res)=>{
+  console.log('in backend api testapi');
+  res.json({
+    success:false,
+    message:'in testapi in backend created at 15:18pm ,15 dec'
+  })
+})
 app.use("/user", userRouter);
 const port = process.env.PORT || 3008;
 app.listen(port, () => {
