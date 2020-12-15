@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import "./css/index.scss";
 
@@ -14,9 +14,17 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import ContactUs from './ContactUs'
 import './css/mobile.scss'
-
+import api from '../../api/index'
 
 function UserIndex() {
+
+  useEffect(()=>{
+    api.pingBackend().then(res=>{
+      console.log('res:',res.data)
+    }).catch(err=>{
+      console.log('err:',err)
+    })
+  })
   return (
     <>
     

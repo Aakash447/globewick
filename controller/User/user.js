@@ -27,7 +27,16 @@ exports.registerUser = (req,res) => {
 }
 
 exports.loginUser = (req,res) => {
+    console.log('============== in loginUser Controller ==============')
+    console.log('data:',req.body)
     User.findOne({'username': req.body.username},(err,user)=>{
+        if(err){
+            console.log('err in server')
+            return res.json({
+                auth:false,
+                message:'error in server'
+            })
+        }
         if(!user) return res.json({
             auth:false,
             message:'Auth failed, email or password not found',
