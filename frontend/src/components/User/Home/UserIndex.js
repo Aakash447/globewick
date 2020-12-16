@@ -24,7 +24,7 @@ function UserIndex() {
     }).catch(err=>{
       console.log('err:',err)
     })
-  })
+  },[])
   return (
     <>
     
