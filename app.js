@@ -32,15 +32,15 @@ var corsOptions = {
 };
 
 var corsOptions_prod = {
-  origin: "https://globewick.herokuapp.com",
+  origin: "https://globewick.com",
   credentials: true,
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
 if(process.env.NODE_ENV=="production"){
-  app.use(cors(corsOptions_prod));
+  app.use(cors());
 }else{
-  app.use(cors(corsOptions));
+  app.use(cors());
 }
 
 
@@ -68,7 +68,7 @@ app.get("/testapi",(req,res)=>{
   })
 })
 app.use("/user", userRouter);
-const port = process.env.PORT || 3008;
+const port = 8974;
 app.listen(port, () => {
   console.log("Server is started at port 3008");
 });
