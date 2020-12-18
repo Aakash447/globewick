@@ -57,6 +57,7 @@ if(process.env.NODE_ENV=="production"){
   app.use(express.static(path.join(__dirname, "./frontend/build")));
 
   app.get("*", (req, res) => {
+    console.log('in production environment build/index.html***')
     res.sendFile(path.resolve(__dirname, "./frontend", "build", "index.html"));
   });
 }
@@ -70,5 +71,5 @@ app.get("/testapi",(req,res)=>{
 app.use("/user", userRouter);
 const port = 8974;
 app.listen(port, () => {
-  console.log("Server is started at port 3008");
+  console.log("Server is started at port 8974");
 });
