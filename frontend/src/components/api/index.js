@@ -5,11 +5,11 @@ const serverEndpoint = '';
 
 const registerUser = (data) => {
     console.log('about to send axios req')
-    return axios.post(serverEndpoint + '/user/register',data ,{withCredentials:true} )
+    return axios.post(serverEndpoint + '/user/register',data)
 }
 const loginUser = (data) => {
     console.log('about to send axios req data:',data)
-    return axios.post(serverEndpoint + '/user/login',data , {withCredentials: true})
+    return axios.post(serverEndpoint + '/user/login',data )
 }
 const logoutUser = (data) => {
     return axios.get(serverEndpoint + '/user/logout', {withCredentials: true})
