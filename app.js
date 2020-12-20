@@ -69,7 +69,7 @@ app.get("/testapi",(req,res)=>{
   })
 })
 app.use("/user", userRouter);
-const port = 8974;
+const port = process.env.PORT ||8974;
 app.listen(port, () => {
   console.log("Server is started at port 8974");
 });
