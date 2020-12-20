@@ -52,6 +52,15 @@ app.use(bodyParser.json());
 // for parsing application/xwww- form data
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get("/testapi",(req,res)=>{
+  console.log('in backend api testapi');
+  res.json({
+    success:false,
+    message:'in testapi in backend created at 15:18pm ,15 dec'
+  })
+})
+app.use("/user", userRouter);
+
 if(process.env.NODE_ENV=="production"){
   //set static folder
   app.use(express.static(path.join(__dirname, "./frontend/build")));
@@ -61,14 +70,7 @@ if(process.env.NODE_ENV=="production"){
     res.sendFile(path.resolve(__dirname, "./frontend", "build", "index.html"));
   });
 }
-app.get("/testapi",(req,res)=>{
-  console.log('in backend api testapi');
-  res.json({
-    success:false,
-    message:'in testapi in backend created at 15:18pm ,15 dec'
-  })
-})
-app.use("/user", userRouter);
+
 const port = process.env.PORT ||8974;
 app.listen(port, () => {
   console.log("Server is started at port 8974");

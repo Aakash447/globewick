@@ -19,6 +19,7 @@ import api from '../../api/index'
 function UserIndex() {
 
   useEffect(()=>{
+    console.log('about to ping backend /testapi')
     api.pingBackend().then(res=>{
       console.log('res:',res.data)
     }).catch(err=>{
