@@ -4,7 +4,7 @@ import Footer from "../Home/Footer";
 import "./login.scss";
 import api from '../../api/index';
 
-function Login() {
+function Login(props) {
   const [data, setData] = useState({});
 
   const handleChange = (e) => {
@@ -17,7 +17,7 @@ function Login() {
     api.loginUser(data).then(res=>{
       console.log('res:',res.data)
       if(res.data.auth){
-        window.location="http://localhost:3000/admin"
+        props.history.push('/admin')
       }
 
     }).catch(err=>{
