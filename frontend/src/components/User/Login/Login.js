@@ -20,8 +20,23 @@ function Login(props) {
         props.history.push('/admin')
       }
 
-    }).catch(err=>{
-      console.log('error',err)
+    }).catch(error=>{
+      // console.log('error',error)
+      if (error.response) {
+        console.log('Request made and server responded');
+        // Request made and server responded
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.log('The request was made but no response was received')
+        console.log(error.request);
+      } else {
+        console.log('Something happened in setting up the request that triggered an Error')
+        // Something happened in setting up the request that triggered an Error
+        console.log('Error', error.message);
+      }
     })
   }
 
